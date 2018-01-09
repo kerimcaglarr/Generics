@@ -1,0 +1,75 @@
+
+
+import UIKit
+
+// Generics ile esnek ve yeniden kullanýlabilir kodlar yazýlýr. Bu yapýlar deðiþken tipinden baðýmsýzdýr.
+
+var sehirler = ["Ýstanbul","Ýzmir","Ankara"] // [String] Elemanlarý string olan bir array
+
+var IntArray = [1,2,3] // [Int]  Elemanlarý int olan bir array
+
+var DoubleArray = [3.14,2.5,3.5] // [Double]  Elemanlarý Double olan bir array
+
+func iller(il:[String]){
+
+    
+
+    for i in il{
+
+        print(i)
+
+    }
+
+}
+
+//iller(il: sehirler)
+
+func tamSayilar(tamSayi:[Int]){
+
+    for ts in tamSayi{
+
+        print(ts)
+
+    }
+
+}
+
+//tamSayilar(tamSayi: IntArray)
+
+func ondalikliSayilar(ondalikliSayi:[Double]){
+
+    ondalikliSayi.map {print($0)}
+
+}
+
+//ondalikliSayilar(ondalikliSayi: DoubleArray)
+
+//GENERÝCS TANIMLAMASI
+
+func herhangiBirArray<T>(array:[T]){
+
+    array.map{print($0)}
+
+}
+
+//herhangiBirArray(array: sehirler)
+
+//herhangiBirArray(array: IntArray)
+
+//herhangiBirArray(array: DoubleArray)
+
+// IKI Parametreli ve Ayný TÝPLÝ GENERIC TANIMLAMASI
+
+func ikiParametreli<T>(bir:T,iki:T){
+
+    
+
+}
+
+//IKI Parametreli ve FARKLI TÝPLÝ GENERIC TANIMLAMASI
+
+func farkliTipliIkýParametreli<T,U>(bir:T, iki:U){
+
+    
+
+}
